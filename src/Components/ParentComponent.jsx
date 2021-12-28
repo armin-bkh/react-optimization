@@ -7,13 +7,13 @@ const ParentComponents = () => {
   const [age, setAge] = useState(0);
   const [score, setScore] = useState(0);
 
-  const ageClickHandler = () => {
+  const ageClickHandler = useCallback(() => {
     setAge((prevAge) => prevAge + 1);
-  };
+  }, [age]);
 
-  const scoreClickHandler = () => {
+  const scoreClickHandler = useCallback(() => {
     setScore((prevScore) => prevScore + 1);
-  };
+  }, [score]);
 
   return (
     <div>
